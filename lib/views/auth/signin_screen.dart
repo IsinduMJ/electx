@@ -1,9 +1,9 @@
-import 'package:electx_new/views/auth/signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../components/custom_input_feild.dart';
 import '../../components/rounded_button.dart';
+import '../../views/auth/signup_screen.dart';
 
 class SigninScreen extends StatefulWidget {
   const SigninScreen({super.key});

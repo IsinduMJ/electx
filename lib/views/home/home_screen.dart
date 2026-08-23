@@ -1,9 +1,9 @@
-import 'package:electx_new/components/timestamp.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
 import '../../components/event_card.dart';
+import '../../components/timestamp.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

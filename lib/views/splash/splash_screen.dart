@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:electx_new/views/auth/signup_screen.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
