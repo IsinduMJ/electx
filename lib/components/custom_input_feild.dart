@@ -13,7 +13,7 @@ class CustomInputField extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 20),
       margin: EdgeInsets.only(bottom: 10),
       // margin: EdgeInsets.all(50),
-      width: size.width * 0.8,
+      width: size.width * 0.875,
       // height: 50,
       decoration: BoxDecoration(
         border: Border.all(color: Colors.black38, width: 1),

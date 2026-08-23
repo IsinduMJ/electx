@@ -47,8 +47,8 @@ class _SignupScreenState extends State<SignupScreen> {
               ),
               SizedBox(height: size.height * 0.03),
               GestureDetector(
-                onTap: () => Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => HomeScreen())),
-                child: RoundedButton(size: size),
+                onTap: () => Navigator.pushNamed(context, '/home'),
+                child: RoundedButton(buttonName: 'Sign Up'),
               ),
               SizedBox(height: size.height * 0.01),
               Row(
@@ -57,9 +57,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   Text("Don't have an account?", style: GoogleFonts.poppins(fontWeight: FontWeight.w400, fontSize: 15)),
                   SizedBox(width: 10),
                   GestureDetector(
-                    onTap: () {
-                      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => SigninScreen()));
-                    },
+                    onTap: () => Navigator.pushNamed(context, '/signin'),
                     child: Text("Sign In", style: GoogleFonts.poppins(fontWeight: FontWeight.w600, fontSize: 15)),
                   ),
                 ],

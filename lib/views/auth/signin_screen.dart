@@ -69,7 +69,7 @@ class _SigninScreenState extends State<SigninScreen> {
               SizedBox(height: size.height * 0.03),
               GestureDetector(
                 onTap: () => Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => SignupScreen())),
-                child: RoundedButton(size: size),
+                child: RoundedButton(buttonName: 'Sign In'),
               ),
               SizedBox(height: size.height * 0.05),
             ],

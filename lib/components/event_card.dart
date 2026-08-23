@@ -1,23 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../views/vote/vote_screen.dart';
-
 class EventCard extends StatefulWidget {
-  const EventCard({super.key});
+  final Function() onTap;
+  final Widget timeStamp;
+
+  const EventCard({super.key, required this.onTap, required this.timeStamp});
 
   @override
   State<EventCard> createState() => _EventCardState();
 }
+
+late Function() onTap;
+late Widget timeStamp;
 
 class _EventCardState extends State<EventCard> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return GestureDetector(
-      onTap: () {
-        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => VoteScreen()));
-      },
+      onTap: widget.onTap,
       child: Container(
         margin: EdgeInsets.symmetric(vertical: 6, horizontal: 15),
         height: size.height * 0.25,
@@ -52,8 +54,14 @@ class _EventCardState extends State<EventCard> {
                     child: Text('Sports Club Election 2026-27', style: GoogleFonts.poppins(fontWeight: FontWeight.w600, fontSize: 20)),
                   ),
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(15, 0, 0, 12),
-                    child: Text('Technology Faculty', style: GoogleFonts.poppins(fontWeight: FontWeight.w400, fontSize: 13)),
+                    padding: const EdgeInsets.fromLTRB(15, 0, 15, 12),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text('Technology Faculty', style: GoogleFonts.poppins(fontWeight: FontWeight.w500, fontSize: 13)),
+                        widget.timeStamp,
+                      ],
+                    ),
                   ),
                 ],
               ),

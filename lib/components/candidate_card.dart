@@ -39,7 +39,7 @@ class _CandidateCardState extends State<CandidateCard> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text("John Doe", style: GoogleFonts.poppins(fontWeight: FontWeight.w500, fontSize: 18)),
-                        Text("Department of ICT", style: GoogleFonts.poppins(fontWeight: FontWeight.w400, fontSize: 11)),
+                        Text("Department of ICT", style: GoogleFonts.poppins(fontWeight: FontWeight.w500, fontSize: 12)),
                       ],
                     ),
                     Container(
