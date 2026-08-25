@@ -1,9 +1,9 @@
-import 'package:electx_new/views/auth/signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../components/custom_input_feild.dart';
 import '../../components/rounded_button.dart';
+import '../../views/auth/signup_screen.dart';
 
 class SigninScreen extends StatefulWidget {
   const SigninScreen({super.key});
@@ -69,7 +69,7 @@ class _SigninScreenState extends State<SigninScreen> {
               SizedBox(height: size.height * 0.03),
               GestureDetector(
                 onTap: () => Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => SignupScreen())),
-                child: RoundedButton(size: size),
+                child: RoundedButton(buttonName: 'Sign In'),
               ),
               SizedBox(height: size.height * 0.05),
             ],

@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
 import '../../components/event_card.dart';
-import '../auth/signup_screen.dart';
+import '../../components/timestamp.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -14,7 +14,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 1;
-  static final List<Widget> _widgetOptions = <Widget>[OngoingEvents(), OngoingEvents(), OngoingEvents()];
+  static final List<Widget> _widgetOptions = <Widget>[RecentEvents(), OngoingEvents(), UpcomingEvents()];
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -39,9 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: Colors.white,
         child: Center(
           child: GestureDetector(
-            onTap: () {
-              Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => SignupScreen()));
-            },
+            onTap: () => Navigator.pushNamed(context, '/signup'),
             child: Text(
               "Logout",
               style: GoogleFonts.poppins(fontWeight: FontWeight.w400, color: Colors.black, fontSize: 16),
@@ -89,6 +87,45 @@ class OngoingEvents extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [EventCard(), EventCard(), EventCard(), EventCard()]);
+    return Column(
+      children: [
+        EventCard(onTap: () => Navigator.pushNamed(context, '/vote'), timeStamp: SizedBox()),
+        EventCard(onTap: () => Navigator.pushNamed(context, '/vote'), timeStamp: SizedBox()),
+        EventCard(onTap: () => Navigator.pushNamed(context, '/vote'), timeStamp: SizedBox()),
+        EventCard(onTap: () => Navigator.pushNamed(context, '/vote'), timeStamp: SizedBox()),
+      ],
+    );
+  }
+}
+
+class UpcomingEvents extends StatelessWidget {
+  const UpcomingEvents({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        EventCard(onTap: () {}, timeStamp: Timestamp()),
+        EventCard(onTap: () {}, timeStamp: Timestamp()),
+        EventCard(onTap: () {}, timeStamp: Timestamp()),
+        EventCard(onTap: () {}, timeStamp: Timestamp()),
+      ],
+    );
+  }
+}
+
+class RecentEvents extends StatelessWidget {
+  const RecentEvents({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        EventCard(onTap: () {}, timeStamp: SizedBox()),
+        EventCard(onTap: () {}, timeStamp: SizedBox()),
+        EventCard(onTap: () {}, timeStamp: SizedBox()),
+        EventCard(onTap: () {}, timeStamp: SizedBox()),
+      ],
+    );
   }
 }

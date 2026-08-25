@@ -14,6 +14,7 @@ dependencies:
   firebase_core: ^4.13.0
   firebase_auth: ^6.5.7
   google_nav_bar: ^5.0.7
+  app_links: ^7.2.1
 
 dev_dependencies:
   flutter_test:

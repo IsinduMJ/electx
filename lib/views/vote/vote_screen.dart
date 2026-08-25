@@ -1,4 +1,3 @@
-import 'package:electx_new/views/home/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -18,12 +17,7 @@ class _VoteScreenState extends State<VoteScreen> {
       appBar: AppBar(
         title: Text("Sports Club Election 2026-27", style: GoogleFonts.poppins(fontSize: 19)),
         backgroundColor: Colors.white,
-        leading: IconButton(
-          onPressed: () {
-            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => HomeScreen()));
-          },
-          icon: Icon(Icons.arrow_back_ios, size: 19),
-        ),
+        leading: IconButton(onPressed: () => Navigator.pushNamed(context, '/home'), icon: Icon(Icons.arrow_back_ios, size: 19)),
       ),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(

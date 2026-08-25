@@ -10,11 +10,11 @@ class CustomInputField extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 20),
+      padding: EdgeInsets.symmetric(horizontal: 10),
       margin: EdgeInsets.only(bottom: 10),
       // margin: EdgeInsets.all(50),
-      width: size.width * 0.8,
-      // height: 50,
+      width: size.width * 0.875,
+      height: size.height * 0.055,
       decoration: BoxDecoration(
         border: Border.all(color: Colors.black38, width: 1),
         color: Colors.black12,
