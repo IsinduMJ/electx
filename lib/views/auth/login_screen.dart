@@ -1,22 +1,21 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../components/rounded_button.dart';
 import '../../components/custom_input_feild.dart';
-import '../../services/auth_service.dart';
 
-class SignupScreen extends StatefulWidget {
-  const SignupScreen({super.key});
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
 
   @override
-  State<SignupScreen> createState() => _SignupScreenState();
+  State<LoginScreen> createState() => _LoginScreenState();
 }
 
 TextEditingController email = TextEditingController();
 TextEditingController password = TextEditingController();
+bool visibility = true;
 
-class _SignupScreenState extends State<SignupScreen> {
+class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -34,7 +33,7 @@ class _SignupScreenState extends State<SignupScreen> {
               ),
               SizedBox(height: size.height * 0.005),
               Center(
-                child: Text("Log into make the right choice.", style: GoogleFonts.poppins(fontWeight: FontWeight.w400, fontSize: 16)),
+                child: Text("Login to make the right choice.", style: GoogleFonts.poppins(fontWeight: FontWeight.w400, fontSize: 16)),
               ),
               SizedBox(height: size.height * 0.065),
               CustomInputField(
@@ -42,6 +41,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   controller: email,
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
+                    hint: Text("john@mail.com"),
                     prefixIcon: Icon(Icons.email_outlined),
                     border: InputBorder.none,
                     label: Text("Email", style: GoogleFonts.poppins(fontWeight: FontWeight.w400, fontSize: 15)),
@@ -51,12 +51,19 @@ class _SignupScreenState extends State<SignupScreen> {
               CustomInputField(
                 textFormField: TextFormField(
                   controller: password,
-                  obscureText: true,
-                  // keyboardType: TextInputType.visiblePassword,
+                  obscureText: visibility,
                   decoration: InputDecoration(
-                    // hint: Text("Student ID"),
+                    hint: Text("••••••••"),
                     border: InputBorder.none,
                     prefixIcon: Icon(Icons.password_outlined),
+                    suffixIcon: IconButton(
+                      onPressed: () {
+                        setState(() {
+                          visibility = !visibility;
+                        });
+                      },
+                      icon: Icon(visibility ? Icons.visibility_outlined : Icons.visibility_off_outlined),
+                    ),
                     label: Text("Password", style: GoogleFonts.poppins(fontWeight: FontWeight.w400, fontSize: 15)),
                   ),
                 ),

@@ -1,9 +1,10 @@
 import 'package:electx_new/firebase_options.dart';
+import 'package:electx_new/views/results/results_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 import '../../views/auth/signin_screen.dart';
-import '../../views/auth/signup_screen.dart';
+import '../../views/auth/login_screen.dart';
 import '../../views/home/home_screen.dart';
 import '../../views/splash/splash_screen.dart';
 import '../../views/vote/vote_screen.dart';
@@ -26,10 +27,11 @@ class MyApp extends StatelessWidget {
       // ),
       routes: {
         '/': (context) => const SplashScreen(),
-        '/signup': (context) => SignupScreen(),
+        '/login': (context) => LoginScreen(),
         '/signin': (context) => SigninScreen(),
         '/home': (context) => HomeScreen(),
         '/vote': (context) => VoteScreen(),
+        '/results': (context) => ResultsScreen(),
       },
     );
   }

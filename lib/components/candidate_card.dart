@@ -73,27 +73,30 @@ class _CandidateCardState extends State<CandidateCard> {
               ),
             ),
           ),
-          Row(
-            children: [
-              SizedBox(width: 10),
-              SizedBox(
-                height: size.height * 0.14,
-                child: Align(
-                  alignment: AlignmentGeometry.centerLeft,
-                  child: Container(
-                    height: size.height * 0.11,
-                    width: size.height * 0.11,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.white,
-                      // border: Border.all(color: Colors.grey.shade300, width: 4),
-                      boxShadow: [BoxShadow(blurRadius: 2, color: Colors.black26, offset: Offset(-1, 1))],
-                      image: DecorationImage(image: AssetImage('assets/images/user_icon.png')),
+          GestureDetector(
+            onLongPress: () {},
+            child: Row(
+              children: [
+                SizedBox(width: 10),
+                SizedBox(
+                  height: size.height * 0.14,
+                  child: Align(
+                    alignment: AlignmentGeometry.centerLeft,
+                    child: Container(
+                      height: size.height * 0.11,
+                      width: size.height * 0.11,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.white,
+                        // border: Border.all(color: Colors.grey.shade300, width: 4),
+                        boxShadow: [BoxShadow(blurRadius: 2, color: Colors.black26, offset: Offset(-1, 1))],
+                        image: DecorationImage(image: AssetImage('assets/images/user_icon.png')),
+                      ),
                     ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ],
       ),

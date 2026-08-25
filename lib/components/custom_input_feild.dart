@@ -17,7 +17,7 @@ class CustomInputField extends StatelessWidget {
       height: size.height * 0.055,
       decoration: BoxDecoration(
         border: Border.all(color: Colors.black38, width: 1),
-        color: Colors.black12,
+        color: Colors.black.withAlpha(15),
         borderRadius: BorderRadius.all(Radius.circular(max(10, 30))),
       ),
       child: textFormField,

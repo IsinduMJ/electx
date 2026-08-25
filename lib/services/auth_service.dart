@@ -8,7 +8,7 @@ class AuthService {
     FirebaseAuth.instance.idTokenChanges().listen((User? user) {
       if (user == null) {
         debugPrint('User is currently signed out!');
-        Navigator.pushNamed(context, '/signup');
+        Navigator.pushNamed(context, '/login');
       } else {
         debugPrint('User is signed in!');
         Navigator.pushNamed(context, '/home');

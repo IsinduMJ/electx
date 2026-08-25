@@ -121,10 +121,30 @@ class RecentEvents extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        EventCard(onTap: () {}, timeStamp: SizedBox()),
-        EventCard(onTap: () {}, timeStamp: SizedBox()),
-        EventCard(onTap: () {}, timeStamp: SizedBox()),
-        EventCard(onTap: () {}, timeStamp: SizedBox()),
+        EventCard(
+          onTap: () {
+            Navigator.pushNamed(context, '/results');
+          },
+          timeStamp: SizedBox(),
+        ),
+        EventCard(
+          onTap: () {
+            Navigator.pushNamed(context, '/results');
+          },
+          timeStamp: SizedBox(),
+        ),
+        EventCard(
+          onTap: () {
+            Navigator.pushNamed(context, '/results');
+          },
+          timeStamp: SizedBox(),
+        ),
+        EventCard(
+          onTap: () {
+            Navigator.pushNamed(context, '/results');
+          },
+          timeStamp: SizedBox(),
+        ),
       ],
     );
   }
