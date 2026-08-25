@@ -9,10 +9,10 @@ class Timestamp extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(color: Colors.green.withAlpha(30), borderRadius: BorderRadius.all(Radius.circular(5))),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 1),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
         child: Row(
           children: [
-            Icon(Icons.history_outlined, color: Colors.green, size: 15),
+            Icon(Icons.timer_outlined, color: Colors.green, size: 15),
             SizedBox(width: 5),
             Text(
               '20/10/2026',

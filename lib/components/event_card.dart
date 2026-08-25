@@ -30,9 +30,19 @@ class _EventCardState extends State<EventCard> {
           boxShadow: [BoxShadow(blurRadius: 2, color: Colors.black26, offset: Offset(1, 1))],
         ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+              child: Align(
+                alignment: Alignment.topRight,
+                child: SizedBox(
+                  width: size.width * 0.3,
+                  child: Center(child: widget.timeStamp),
+                ),
+              ),
+            ),
             Container(
               width: size.width,
               height: size.height * 0.075,
@@ -55,13 +65,7 @@ class _EventCardState extends State<EventCard> {
                   ),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(15, 0, 15, 12),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text('Technology Faculty', style: GoogleFonts.poppins(fontWeight: FontWeight.w500, fontSize: 13)),
-                        widget.timeStamp,
-                      ],
-                    ),
+                    child: Text('Technology Faculty', style: GoogleFonts.poppins(fontWeight: FontWeight.w500, fontSize: 13)),
                   ),
                 ],
               ),
